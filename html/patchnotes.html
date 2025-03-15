@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Cells - Rogue-lite metroidvania </title>
+    <link rel="icon" href="../img/descargar-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/stylos.css">
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logoBigColor2.png" alt="Logo" height="90" width="130">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./trailer.html">Trailer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./patchnotes.html">Wiki</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Armas -->
+    <div id="weapons" class="section">
+        <div class="container">
+            <h2 class="mb-4">Armas principales</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip" title="Provoca sangrado (3,5 DPS durante 12 s).">
+                        <img src="../img/Captura de pantalla 2025-03-11 102828.png" class="card-img-top" alt="Espada">
+                        <div class="card-body">
+                            <h5 class="card-title">Espada de sangre</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">150</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal1">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Provoca sangrado (22 DPS durante 3 s). Apunta automáticamente al enemigo más cercano.">
+                        <img src="../img/Captura de pantalla 2025-03-11 103213.png" class="card-img-top" alt="Espada">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuchillo arrojadizo</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">5</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal2">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip" title="Daño crítico en enemigos saltando">
+                        <img src="../img/Captura de pantalla 2025-03-11 103930.png" class="card-img-top" alt="Espada">
+                        <div class="card-body">
+                            <h5 class="card-title">Alucard's Shield</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">155</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal3">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear desde arriba.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232447.png" class="card-img-top" alt="Lanza">
+                        <div class="card-body">
+                            <h5 class="card-title">Lanza de asalto</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">120</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal4">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear desde atrás.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232512.png" class="card-img-top" alt="Daga">
+                        <div class="card-body">
+                            <h5 class="card-title">Daga de asesino</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">90</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal5">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear enemigos congelados.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232605.png" class="card-img-top" alt="Espada de hielo">
+                        <div class="card-body">
+                            <h5 class="card-title">Espada de hielo</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">110</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal6">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear enemigos envenenados.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232656.png" class="card-img-top" alt="Daga de veneno">
+                        <div class="card-body">
+                            <h5 class="card-title">Daga de veneno</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">95</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal7">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear enemigos desde lejos.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232713.png" class="card-img-top" alt="Arco compuesto">
+                        <div class="card-body">
+                            <h5 class="card-title">Arco compuesto</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">130</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal8">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear enemigos en el aire.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232845.png" class="card-img-top" alt="Lanza de asalto">
+                        <div class="card-body">
+                            <h5 class="card-title">Lanza de asalto</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">140</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal9">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear enemigos desde arriba.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232825.png" class="card-img-top" alt="Martillo de guerra">
+                        <div class="card-body">
+                            <h5 class="card-title">Martillo de guerra</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">160</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal10">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear enemigos congelados.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232917.png" class="card-img-top" alt="Espada de hielo">
+                        <div class="card-body">
+                            <h5 class="card-title">Espada de hielo</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">110</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal11">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-dark text-light" data-bs-toggle="tooltip"
+                        title="Inflige daño crítico al golpear enemigos envenenados.">
+                        <img src="../img/Captura de pantalla 2025-03-12 232901.png" class="card-img-top" alt="Daga de veneno">
+                        <div class="card-body">
+                            <h5 class="card-title">Daga de veneno</h5>
+                            <p class="card-text">Daño base: <span class="badge bg-danger">95</span></p>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#weaponModal12">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biomas-->
+    <div id="biomes" class="section">
+        <div class="container">
+            <h2 class="mb-4">Biomas principales</h2>
+            <div class="accordion" id="biomesAccordion">
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            Prisoners' Quarters
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="1" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Zombie</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            Promenade of the Condemned
+                        </button>
+                    </h2>
+                    <div id="collapsetwo" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="2" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Launchers</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            Toxic Sewers
+                        </button>
+                    </h2>
+                    <div id="collapsethree" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="2" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Rats</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            Ossuary
+                        </button>
+                    </h2>
+                    <div id="collapsefour" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="4" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Slimes</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            High Peak Castle
+                        </button>
+                    </h2>
+                    <div id="collapsefive" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="5" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Mini Boss</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix">
+                            Ancient Sewers
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="3" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Slimes</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven">
+                            Stilt Village
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="4" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Pirates</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight">
+                            Forgotten Sepulcher
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="4" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Dark Trackers</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine">
+                            Clock Tower
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="4" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Bombers</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTen">
+                            Slumbering Sanctuary
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="3" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Golems</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEleven">
+                            Graveyard
+                        </button>
+                    </h2>
+                    <div id="collapseEleven" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="4" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Zombies</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwelve">
+                            Cavern
+                        </button>
+                    </h2>
+                    <div id="collapseTwelve" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="5" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Golems</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThirteen">
+                            Derelict Distillery
+                        </button>
+                    </h2>
+                    <div id="collapseThirteen" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="5" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Bombers</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFourteen">
+                            Fractured Shrines
+                        </button>
+                    </h2>
+                    <div id="collapseFourteen" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Dificultad: <progress class="progress-bar bg-warning" value="4" max="5"></progress></p>
+                            <p>Enemigos comunes: <span class="badge bg-warning">Inquisitors</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enemigos -->
+    <div id="enemies" class="section ">
+        <div class="container">
+            <h2 class="mb-4">Enemigos</h2>
+            <div class="row ">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Zombie
+                            <span class="badge bg-warning">Nivel 1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Launchers
+                            <span class="badge bg-warning">nivel 2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Rats
+                            <span class="badge bg-warning">Nivel 3</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Archer
+                            <span class="badge bg-warning">Nivel 1 </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Clerigo
+                            <span class="badge bg-warning">Nivel 4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Berserk
+                            <span class="badge bg-warning">Nivel 5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Slasher
+                            <span class="badge bg-warning">Nivel 2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Bomber
+                            <span class="badge bg-warning">Nivel 3</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Inquisitor
+                            <span class="badge bg-warning">Nivel 4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Dark Tracker
+                            <span class="badge bg-warning">Nivel 4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Golem
+                            <span class="badge bg-warning">Nivel 5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Cannibal
+                            <span class="badge bg-warning">Nivel 3</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Hammer
+                            <span class="badge bg-warning">Nivel 4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Rampager
+                            <span class="badge bg-warning">Nivel 5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Slammer
+                            <span class="badge bg-warning">Nivel 4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                            Yeeter
+                            <span class="badge bg-warning">Nivel 3</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estrategias -->
+    <div id="strategies" class="section">
+        <div class="container">
+            <h2 class="mb-4">Estrategias</h2>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Nivel</th>
+                        <th>Consejo</th>
+                        <th>Dificultad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Usa ataques a distancia</td>
+                        <td><span class="badge bg-warning">Fácil</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Usa ataques a distancia y cuerpo a cuerpo</td>
+                        <td><span class="badge bg-warning">Medio</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Usa ataques aéreos y torretas</td>
+                        <td><span class="badge bg-warning">Medio</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Usa ataques a distancia y torretas</td>
+                        <td><span class="badge bg-warning">Dificil</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Usa ataques a distancia y cuerpo a cuerpo, tambien usa torretas o invocaciones</td>
+                        <td><span class="badge bg-warning">Extremo</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Usa habilidades de congelación para controlar a los enemigos</td>
+                        <td><span class="badge bg-warning">Medio</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Combina ataques cuerpo a cuerpo con habilidades de área</td>
+                        <td><span class="badge bg-warning">Difícil</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Usa habilidades de teletransporte para evitar daño</td>
+                        <td><span class="badge bg-warning">Extremo</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Usa habilidades de congelación para controlar a los enemigos</td>
+                        <td><span class="badge bg-warning">Medio</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Combina ataques cuerpo a cuerpo con habilidades de área</td>
+                        <td><span class="badge bg-warning">Difícil</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Usa habilidades de teletransporte para evitar daño</td>
+                        <td><span class="badge bg-warning">Extremo</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Usa habilidades de veneno para daño prolongado</td>
+                        <td><span class="badge bg-warning">Medio</span></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Combina ataques a distancia con habilidades de congelación</td>
+                        <td><span class="badge bg-warning">Difícil</span></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Usa habilidades de área para controlar grupos de enemigos</td>
+                        <td><span class="badge bg-warning">Extremo</span></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Combina ataques cuerpo a cuerpo con habilidades de veneno</td>
+                        <td><span class="badge bg-warning">Difícil</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Offcanvas (Componente 11) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="infoCanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Credits</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Why did you make Dead Cells?
+
+                We wanted to make a PC/Console game for years but were quite
+                shy. In 2012, the project started simply as “Hordes Zero”, a
+                sequel to Die2Nite.
+
+                Its creation had ups and downs until 2015, when we were in a
+                quite difficult situation financially speaking. The
+                web-games that we were creating since the beginning of MT
+                weren’t successful anymore… and we HAD TO change things
+                heavily.
+
+                So, we focused on Dead Cells and just went ALL IN! Thus we
+                kept working, iterating, testing, and we decided to morph
+                this “cooperative tower-defense” game (yes! that was the
+                original idea, and it was booOOoring)… into a single-player
+                combat experience, thanks to the “game-feel-spices” we had
+                tried in game jams around this period. You might actually
+                see some of those “early-spices” in “ScarKrow”, a
+                game-prototype made during the 32th Ludum Dare.
+
+                Who is Dead Cells’ music composer?
+
+                Yoan Laulan aka “Valmont”!… who, fun fact, also did
+                participate in the jam and did the music of ScarKrow :D</p>
+        </div>
+    </div>
+
+    <!-- Modal (Componente 12) -->
+    <!-- Modal 1: Espada de sangre -->
+<div class="modal fade" id="weaponModal1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Espada de sangre</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">150</span></li>
+                            <li><strong>Duración del combo:</strong> 0.41 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical, Bleed</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Sangrado:</strong> 3.5 DPS durante 12 segundos</li>
+                            <li><strong>Bonificación por violación:</strong> -0.4 / -0.3</li>
+                            <li><strong>DPS de violación base:</strong> 79</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.25 (0.25 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.16 (0.16 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Doble pila<br>
+                        "Aplica 2 acumulaciones de efectos de daño a lo largo del tiempo en lugar de 1".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2: Cuchillo arrojadizo -->
+<div class="modal fade" id="weaponModal2">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Cuchillo arrojadizo</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">5</span></li>
+                            <li><strong>Municiones:</strong> 8</li>
+                            <li><strong>Etiquetas:</strong> Ranged, Bleed, LimitedAmmo</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Sangrado:</strong> 22 DPS durante 3 segundos</li>
+                            <li><strong>Bonificación por incumplimiento:</strong> -1</li>
+                            <li><strong>Duración del ataque:</strong> 0.1 segundos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Propagación de sangrado<br>
+                        "Si la víctima muere por daño de sangrado, los enemigos circundantes también comienzan a sangrar".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3: Escudo de Alucard -->
+<div class="modal fade" id="weaponModal3">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Escudo de Alucard</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">155</span></li>
+                            <li><strong>Duración del combo:</strong> 1.41 segundos</li>
+                            <li><strong>Etiquetas:</strong> Escudo</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Bonificaciones</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Bonificación de Breach:</strong> 0 / -0.7 / -0.7</li>
+                            <li><strong>Daño de Breach base:</strong> 35 (105) / 15 (45) / 21 (63)</li>
+                            <li><strong>DPS de Breach base:</strong> 50 (151)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.45 (0.4 + 0.05 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.38 (0.21 + 0.17 + 0)</li>
+                        <li><strong>Tercer golpe:</strong> 0.58 (0.29 + 0.29 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Conjunto completo<br>
+                        "Obtienes el otro objeto del conjunto de Alucard. Solo se puede activar una vez por partida".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal4">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Lanza de asalto</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">120</span></li>
+                            <li><strong>Duración del combo:</strong> 0.5 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear desde arriba</li>
+                            <li><strong>Bonificación por violación:</strong> -0.5</li>
+                            <li><strong>DPS de violación base:</strong> 85</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.3 (0.3 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.2 (0.2 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Daño crítico mejorado<br>
+                        "El daño crítico se incrementa en un 50%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal5">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Daga de asesino</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">90</span></li>
+                            <li><strong>Duración del combo:</strong> 0.4 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear desde atrás</li>
+                            <li><strong>Bonificación por violación:</strong> -0.6</li>
+                            <li><strong>DPS de violación base:</strong> 75</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.25 (0.25 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.15 (0.15 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Ataque sigiloso<br>
+                        "Los ataques desde atrás no alertan a otros enemigos".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal6">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Espada de hielo</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">110</span></li>
+                            <li><strong>Duración del combo:</strong> 0.5 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear enemigos congelados</li>
+                            <li><strong>Bonificación por violación:</strong> -0.5</li>
+                            <li><strong>DPS de violación base:</strong> 85</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.3 (0.3 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.2 (0.2 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Congelación prolongada<br>
+                        "La duración de la congelación se incrementa en un 50%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal7">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Daga de veneno</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">95</span></li>
+                            <li><strong>Duración del combo:</strong> 0.4 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear enemigos envenenados</li>
+                            <li><strong>Bonificación por violación:</strong> -0.6</li>
+                            <li><strong>DPS de violación base:</strong> 75</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.25 (0.25 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.15 (0.15 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Veneno mejorado<br>
+                        "El daño de veneno se incrementa en un 50%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal8">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Arco compuesto</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">130</span></li>
+                            <li><strong>Duración del combo:</strong> 0.6 segundos</li>
+                            <li><strong>Etiquetas:</strong> Ranged, NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear desde lejos</li>
+                            <li><strong>Bonificación por violación:</strong> -0.4</li>
+                            <li><strong>DPS de violación base:</strong> 90</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.35 (0.35 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.25 (0.25 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Mayor alcance<br>
+                        "El alcance del arco se incrementa en un 30%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal9">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Lanza de asalto</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">140</span></li>
+                            <li><strong>Duración del combo:</strong> 0.7 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear en el aire</li>
+                            <li><strong>Bonificación por violación:</strong> -0.5</li>
+                            <li><strong>DPS de violación base:</strong> 100</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.4 (0.4 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.3 (0.3 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Mayor daño en el aire<br>
+                        "El daño crítico en el aire se incrementa en un 50%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal10">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Martillo de guerra</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">160</span></li>
+                            <li><strong>Duración del combo:</strong> 0.8 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear desde arriba</li>
+                            <li><strong>Bonificación por violación:</strong> -0.6</li>
+                            <li><strong>DPS de violación base:</strong> 110</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.45 (0.45 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.35 (0.35 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Mayor impacto<br>
+                        "El daño crítico desde arriba se incrementa en un 60%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal11">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Espada de hielo</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">110</span></li>
+                            <li><strong>Duración del combo:</strong> 0.5 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear enemigos congelados</li>
+                            <li><strong>Bonificación por violación:</strong> -0.5</li>
+                            <li><strong>DPS de violación base:</strong> 85</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.3 (0.3 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.2 (0.2 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Congelación prolongada<br>
+                        "La duración de la congelación se incrementa en un 50%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="weaponModal12">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Daga de veneno</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Detalles principales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño base:</strong> <span class="badge bg-danger">95</span></li>
+                            <li><strong>Duración del combo:</strong> 0.4 segundos</li>
+                            <li><strong>Etiquetas:</strong> NoCritical</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Efectos especiales</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Daño crítico:</strong> Al golpear enemigos envenenados</li>
+                            <li><strong>Bonificación por violación:</strong> -0.6</li>
+                            <li><strong>DPS de violación base:</strong> 75</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6 class="text-info">Golpes del combo</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Primer golpe:</strong> 0.25 (0.25 + 0 + 0)</li>
+                        <li><strong>Segundo golpe:</strong> 0.15 (0.15 + 0 + 0)</li>
+                    </ul>
+                </div>
+                <div class="mt-3 bg-secondary p-3 rounded">
+                    <h6 class="text-success">Versión legendaria</h6>
+                    <p class="mb-0">
+                        Afijo forzado: Veneno mejorado<br>
+                        "El daño de veneno se incrementa en un 50%".
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="fcontent">
+        <div class="column">
+            <img src="https://dead-cells.com/img/mtlogo.png" alt="Motion Twin">
+            <p><a href="https://motion-twin.com/" target="_blank">Motion Twin</a> es una cooperativa de trabajadores francesa con sede en Burdeos.</p>
+            <p>Llevamos haciendo juegos desde 2001 y vamos a seguir haciéndolo hasta que llegue la senilidad. Actualmente trabajando en nuestro primer título para PC/consola.</p>
+        </div>
+        <div class="column links">
+            <p><a href="http://store.steampowered.com/app/588650/Dead_Cells/" target="_blank">Disponible en Steam</a></p>
+            <p><a href="https://twitter.com/motiontwin" target="_blank">Síguenos en Twitter</a></p>
+            <p><a href="https://www.facebook.com/dead.cells.game" target="_blank">Síguenos en Facebook</a></p>
+            <p><a href="https://motion-twin.com/presskit/81" target="_blank">Presskit</a></p>
+        </div>
+        <div class="column radio-player">
+            <audio id="background-audio" loop autoplay>
+                <source src="../img/01. Dead Cells.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <button id="toggle-audio" aria-label="Toggle music">
+                <img id="audio-icon" src="../img/pausa.svg" alt="Icono de música" width="32">
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="loader">
+    <div class="loader-background">
+        <div class="loader-content">
+            <h1>DEAD CELLS</h1>
+            <p>"Cada muerte es una oportunidad para mejorar."</p>
+        </div>
+        <div class="loading-indicator">
+            <img src="../img/fire-3352_256.gif" alt="Loading flame">
+            <span>Loading...</span>
+        </div>
+    </div>
+</div>
+
+<script src="../Js/script.js"></script>
+</body>
+
+</html>

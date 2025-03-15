@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Cells - Rogue-lite metroidvania </title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/descargar-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/stylos.css">
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logoBigColor2.png" alt="Logo" height="90" width="130">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./trailer.html">Trailer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./patchnotes.html">Wiki</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="title text-center">¿Que es Dead Cells?</h1>
+        <p class="text-center description">
+            Dead Cells es un juego de plataformas y acción rogue-lite inspirado en Castlevania. Explora un castillo
+            extenso y en constante cambio, lucha contra sus guardianes y domina el combate soul-lite en 2D con la
+            amenaza constante de la muerte permanente. Sin puntos de control. Mata, muere, aprende, repite.
+        </p>
+
+        <div class="row text-light">
+            <div class="col-md-6">
+                <h3 class="text-danger">RogueVania:</h3>
+                <p>Intensa acción en 2D con la adrenalina de la muerte permanente en un castillo lleno de adorables
+                    criaturas.</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-danger">Progresión no lineal:</h3>
+                <p>Desbloquea nuevos niveles con cada muerte y elige diferentes caminos en tu aventura.</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-warning">Combate Souls-lite:</h3>
+                <p>Jefes y esbirros basados ​​en patrones, armas y hechizos únicos. Aprende y perfecciona tus
+                    movimientos.</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-warning">Exploración:</h3>
+                <p>Habitaciones secretas, pasadizos ocultos y paisajes encantadores. El castillo tiene mucho por
+                    descubrir.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <video class="video-fluid rounded w-100" controls>
+                    <source src="../img/roof.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+            <div class="col-md-6">
+                <video class="video-fluid rounded w-100" controls>
+                    <source src="../img/bossFight.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div><br>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="fcontent">
+            <div class="column">
+                <img src="https://dead-cells.com/img/mtlogo.png" alt="Motion Twin">
+                <p><a href="https://motion-twin.com/" target="_blank">Motion Twin</a> es una cooperativa de trabajadores
+                    francesa con sede en Burdeos.</p>
+                <p>Llevamos haciendo juegos desde 2001 y vamos a seguir haciéndolo hasta que llegue la senilidad.
+                    Actualmente trabajando en nuestro primer título para PC/consola.</p>
+            </div>
+            <div class="column links">
+                <p><a href="http://store.steampowered.com/app/588650/Dead_Cells/" target="_blank">Disponible en
+                        Steam</a></p>
+                <p><a href="https://twitter.com/motiontwin" target="_blank">Síguenos en Twitter</a></p>
+                <p><a href="https://www.facebook.com/dead.cells.game" target="_blank">Síguenos en Facebook</a></p>
+                <p><a href="https://motion-twin.com/presskit/81" target="_blank">Presskit</a></p>
+            </div>
+            <div class="column radio-player">
+                <audio id="background-audio" loop autoplay>
+                    <source src="../img/01. Dead Cells.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <button id="toggle-audio" aria-label="Toggle music">
+                    <img id="audio-icon" src="../img/pausa.svg" alt="Icono de música" width="32">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader">
+        <div class="loader-background">
+            <div class="loader-content">
+                <h1>DEAD CELLS</h1>
+                <p>"Cada muerte es una oportunidad para mejorar."</p>
+            </div>
+            <div class="loading-indicator">
+                <img src="../img/fire-3352_256.gif" alt="Loading flame">
+                <span>Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Js/script.js"></script>
+</body>
+
+</html>

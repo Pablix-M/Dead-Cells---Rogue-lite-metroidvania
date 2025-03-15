@@ -1,0 +1,507 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    background-color: #101524;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+#menu {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 55;
+    top: 0;
+    background-color: rgba(16, 21, 36, 0.9);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700; /* Color dorado */
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    color: #FFD700; /* Color dorado */
+}
+
+/* Estilos para el contenedor del tráiler */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/headerBanner.jpg'); /* Reemplaza con tu ruta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Overlay opcional para oscurecer la imagen de fondo */
+.hero-section .overlay {
+    position:absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad según necesites */
+    z-index: 1;
+}
+
+/* El iframe encima del fondo */
+.hero-section iframe {
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    height: 45vw; /* Proporción tipo YouTube (16:9) */
+    max-height: 70%;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.custom-navbar {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 15px 20px;
+    background-color: rgba(27, 35, 59, 0.5); /* semitransparente */
+    backdrop-filter: blur(6px); /* vidrio esmerilado */
+    z-index: 999;
+}
+
+.custom-navbar.scrolled {
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(30, 35, 50, 0.95); /* Más oscuro al hacer scroll */
+    padding: 10px 20px;
+}
+
+/* Estilos del logo */
+.navbar-brand img {
+    font-family: 'Orbitron', sans-serif;
+    height: 50px;
+}
+
+.navbar-toggler-icon{
+    background-color: #3e3496;
+}
+
+.navbar-toggler{
+    background-color: #3e3496;
+}
+
+/* Tipografía personalizada similar a la de Dead Cells */
+.navbar-nav .nav-link {
+    font-family: 'Orbitron', sans-serif;
+    color: #d3d3d3;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    font-family: 'Orbitron', sans-serif;
+    color: #FFD700; /* Color dorado al pasar el cursor */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos */
+    align-items: center; /* Alinea verticalmente */
+    background-color: #101524; /* Color de fondo */
+    padding: 15px 30px; /* Espaciado */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar ul li {
+    margin: 0 15px; 
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar ul li a:hover {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff5733; /* Efecto hover */
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Orbitron', sans-serif;
+    color: #d3d3d3;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    font-family: 'Orbitron', sans-serif;
+    color: #FFD700; /* Color dorado */
+}
+
+footer {
+    background-color: #1a2958;
+}
+
+#footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: justify;
+    background: linear-gradient(to bottom, rgba(3, 3, 3, 0.8), rgba(8, 10, 18, 0.5) 12px);
+}
+
+.fcontent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.column img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.column p {
+    color: white;
+    font-size: 14px;
+}
+
+.column.links p {
+    margin: 5px 0;
+}
+
+.column a {
+    color: white;
+    text-decoration: none;
+}
+
+.column a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #020a16;
+    background-color: #101524;
+}
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+.biome-card {
+    transition: transform 0.3s;
+}
+
+.biome-card:hover {
+    transform: translateY(-5px);
+}
+
+.offcanvas{
+    background-color: #18203a;
+    color: #FFFFFF;
+}
+
+.card {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.row {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.container{
+    background-color: #101524;
+    color: #FFFFFF;
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 2px solid #444;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    border-top: 2px solid #444;
+}
+
+/* Estilos para los títulos */
+h5.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las listas */
+.list-unstyled li {
+    margin-bottom: 8px;
+}
+
+/* Estilos para los badges */
+.badge {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+}
+
+/* Estilos para la sección de versión legendaria */
+.bg-light {
+    background-color: #1e3852 !important;
+}
+
+.rounded {
+    border-radius: 8px !important;
+}
+
+/* Estilos para los botones */
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.column p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+h1{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#gameCarousel .carousel-item img {
+    width: 50%; /* Ajusta el tamaño de las imágenes al 50% del contenedor */
+    height: auto; /* Mantén la proporción de las imágenes */
+    margin: 0 auto; /* Centra las imágenes en el carrusel */
+}
+
+#gameCarousel .carousel-caption {
+    max-width: 50%; /* Ajusta el tamaño del fondo de texto al 50% del contenedor */
+    margin: 0 auto; /* Centra el fondo de texto */
+}
+
+.title {
+    font-size: 3rem;
+    color: #ff3355;
+    text-shadow: 2px 2px 5px rgba(255, 51, 85, 0.5);
+}
+
+.description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-light {
+    margin-top: 20px;
+}
+
+.img-fluid {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+button{
+    background-color: #18203a;
+    color: #FFFFFF;
+    border-radius: 50px;
+}
+
+.img-id{
+    border-radius: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.radio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1em;
+}
+
+#toggle-audio {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#toggle-audio img {
+    filter: brightness(0) invert(1); /* blanco en fondo oscuro */
+    transition: transform 0.2s;
+    width: 32px;
+}
+
+#toggle-audio:hover img {
+    transform: scale(1.1);
+}
+
+/* 🔄 Pantalla de carga estilo Dead Cells */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1f1e23;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 3s;
+}
+
+.loader-background {
+    background-image: url("../img/AlternativeKeyArt.jpg"); /* Tu imagen estilo Dead Cells */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader-content {
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.loader-content h1 {
+    font-size: 48px;
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+.loader-content p {
+    font-size: 18px;
+    font-style: italic;
+    color: #ccc;
+}
+
+.loading-indicator {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: monospace;
+    color: white;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.loading-indicator img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ⏳ Animación para desaparecer el loader */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.gallery-img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-img:hover {
+    transform: scale(1.05);
+}
